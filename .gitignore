@@ -9,3 +9,5 @@ __pycache__/
 *.swo
 *.DS_Store
 Thumbs.db
+threads_storage_state.json
+*.storage_state.json

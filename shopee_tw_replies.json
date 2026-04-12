@@ -1,7 +1,7 @@
 {
   "username": "shopee_tw",
-  "source_url": "https://www.threads.net/@shopee_tw/replies",
-  "scraped_at": "2026-04-12T09:02:59.916147+00:00",
+  "source_url": "https://www.threads.com/@shopee_tw/replies",
+  "scraped_at": "2026-04-12T09:34:07.549927+00:00",
   "max_posts": 50,
   "stop_reason": "max_posts",
   "posts": [
@@ -21,8 +21,8 @@
       "metrics": {
         "讚": {
           "label": "讚",
-          "raw": "5,466",
-          "value": 5466
+          "raw": "5,485",
+          "value": 5485
         },
         "回覆": {
           "label": "回覆",
@@ -31,8 +31,8 @@
         },
         "轉發": {
           "label": "轉發",
-          "raw": "141",
-          "value": 141
+          "raw": "142",
+          "value": 142
         },
         "分享": {
           "label": "分享",
@@ -40,7 +40,7 @@
           "value": 155
         }
       },
-      "raw_text": "raccoon_00011 棉蝦99 1天 每日畫一張圖直到有100000粉為止 22Day 🤝🏻 1 / 2 5,466 55 141 155"
+      "raw_text": "raccoon_00011 棉蝦99 1天 每日畫一張圖直到有100000粉為止 22Day 🤝🏻 1 / 2 5,485 55 142 155"
     },
     {
       "author": {
@@ -58,8 +58,8 @@
       "metrics": {
         "讚": {
           "label": "讚",
-          "raw": "1,141",
-          "value": 1141
+          "raw": "1,146",
+          "value": 1146
         },
         "回覆": {
           "label": "回覆",
@@ -72,7 +72,7 @@
           "value": 5
         }
       },
-      "raw_text": "shopee_tw 1天 🫪 1,141 7 5"
+      "raw_text": "shopee_tw 1天 🫪 1,146 7 5"
     },
     {
       "author": {
@@ -90,8 +90,8 @@
       "metrics": {
         "讚": {
           "label": "讚",
-          "raw": "4,525",
-          "value": 4525
+          "raw": "4,552",
+          "value": 4552
         },
         "回覆": {
           "label": "回覆",
@@ -100,16 +100,16 @@
         },
         "轉發": {
           "label": "轉發",
-          "raw": "105",
-          "value": 105
+          "raw": "106",
+          "value": 106
         },
         "分享": {
           "label": "分享",
-          "raw": "239",
-          "value": 239
+          "raw": "241",
+          "value": 241
         }
       },
-      "raw_text": "museacg 1天 @shopee_tw 1 / 2 4,525 85 105 239"
+      "raw_text": "museacg 1天 @shopee_tw 1 / 2 4,552 85 106 241"
     },
     {
       "author": {
@@ -127,8 +127,8 @@
       "metrics": {
         "讚": {
           "label": "讚",
-          "raw": "2,175",
-          "value": 2175
+          "raw": "2,183",
+          "value": 2183
         },
         "回覆": {
           "label": "回覆",
@@ -142,11 +142,11 @@
         },
         "分享": {
           "label": "分享",
-          "raw": "66",
-          "value": 66
+          "raw": "67",
+          "value": 67
         }
       },
-      "raw_text": "shopee_tw 1天 我已經準備好養你一輩子了 2,175 18 10 66"
+      "raw_text": "shopee_tw 1天 我已經準備好養你一輩子了 2,183 18 10 67"
     },
     {
       "author": {
@@ -191,8 +191,8 @@
       "metrics": {
         "讚": {
           "label": "讚",
-          "raw": "83",
-          "value": 83
+          "raw": "84",
+          "value": 84
         },
         "回覆": {
           "label": "回覆",
@@ -210,7 +210,7 @@
           "value": 2
         }
       },
-      "raw_text": "shopee_tw 2天 83 2 1 2"
+      "raw_text": "shopee_tw 2天 84 2 1 2"
     },
     {
       "author": {
@@ -413,479 +413,6 @@
         }
       },
       "raw_text": "shopee_tw 2天 532 2 1"
-    },
-    {
-      "author": {
-        "username": "jasmine.09200",
-        "profile_url": "/@jasmine.09200",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@jasmine.09200/post/DW3g7usk9lA",
-      "timestamp": {
-        "display": "3天",
-        "exact": "2026年4月8日 星期三 下午6:31"
-      },
-      "replying_to": null,
-      "content": "笑死為什麼北車會有這個",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "5 萬",
-          "value": 50000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "304",
-          "value": 304
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "1,503",
-          "value": 1503
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "6,620",
-          "value": 6620
-        }
-      },
-      "raw_text": "jasmine.09200 3天 笑死為什麼北車會有這個 5 萬 304 1,503 6,620"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW4NnBlgZZs",
-      "timestamp": {
-        "display": "3天",
-        "exact": "2026年4月9日 星期四 上午1:01"
-      },
-      "replying_to": null,
-      "content": "不要忽視任何異常。\n如發現任何異常，立即回頭。\n如沒發現任何異常，不要回頭。",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "1,819",
-          "value": 1819
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "4",
-          "value": 4
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "10",
-          "value": 10
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "12",
-          "value": 12
-        }
-      },
-      "raw_text": "shopee_tw 3天 不要忽視任何異常。 如發現任何異常，立即回頭。 如沒發現任何異常，不要回頭。 1,819 4 10 12"
-    },
-    {
-      "author": {
-        "username": "mm_1sochen",
-        "profile_url": "/@mm_1sochen",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@mm_1sochen/post/DW03kTnkePY",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午5:51"
-      },
-      "replying_to": null,
-      "content": "谁懂我有多崩溃\n劇透",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "6.9 萬",
-          "value": 69000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "320",
-          "value": 320
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "7,368",
-          "value": 7368
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "4,691",
-          "value": 4691
-        }
-      },
-      "raw_text": "mm_1sochen 4天 谁懂我有多崩溃 劇透 6.9 萬 320 7,368 4,691"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW3Pm08GKfv",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月8日 星期三 下午3:59"
-      },
-      "replying_to": null,
-      "content": "不是，哥們\n算了我找人弄你",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "223",
-          "value": 223
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "shopee_tw 4天 不是，哥們 算了我找人弄你 223 1 1"
-    },
-    {
-      "author": {
-        "username": "_zhumi6",
-        "profile_url": "/@_zhumi6",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@_zhumi6/post/DW0yKLhCUkk",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午5:04"
-      },
-      "replying_to": null,
-      "content": "有沒有那種\n「你越是這樣我悅氏礦泉水」\n這種很幹的話😭",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "1.1 萬",
-          "value": 11000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "188",
-          "value": 188
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "858",
-          "value": 858
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "1,670",
-          "value": 1670
-        }
-      },
-      "raw_text": "_zhumi6 4天 有沒有那種 「你越是這樣我悅氏礦泉水」 這種很幹的話😭 1.1 萬 188 858 1,670"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW2ooHiGL5d",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月8日 星期三 上午10:19"
-      },
-      "replying_to": null,
-      "content": "不得不拿出我們的傳家寶了\nshopee_tw",
-      "metrics": {
-        "instagram logo": {
-          "label": "Instagram logo",
-          "raw": "shopee_tw",
-          "value": null
-        },
-        "讚": {
-          "label": "讚",
-          "raw": "642",
-          "value": 642
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "3",
-          "value": 3
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "17",
-          "value": 17
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "41",
-          "value": 41
-        }
-      },
-      "raw_text": "shopee_tw 4天 不得不拿出我們的傳家寶了 shopee_tw 642 3 17 41"
-    },
-    {
-      "author": {
-        "username": "xnfyenn",
-        "profile_url": "/@xnfyenn",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@xnfyenn/post/DWze-7wkzEK",
-      "timestamp": {
-        "display": "5天",
-        "exact": "2026年4月7日 星期二 上午4:57"
-      },
-      "replying_to": null,
-      "content": "女孩你不能有1000就花3000。",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "1.4 萬",
-          "value": 14000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "110",
-          "value": 110
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "2,631",
-          "value": 2631
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "1,159",
-          "value": 1159
-        }
-      },
-      "raw_text": "xnfyenn 5天 女孩你不能有1000就花3000。 1.4 萬 110 2,631 1,159"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW1iu-EmE-u",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月8日 星期三 上午12:08"
-      },
-      "replying_to": null,
-      "content": "你覺得這則貼文有什麼問題？\n☑引起不適\n☑我不喜歡自己出現在文章上\n☑其他問題",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "269",
-          "value": 269
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "3",
-          "value": 3
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "3",
-          "value": 3
-        }
-      },
-      "raw_text": "shopee_tw 4天 你覺得這則貼文有什麼問題？ ☑引起不適 ☑我不喜歡自己出現在文章上 ☑其他問題 269 3 3"
-    },
-    {
-      "author": {
-        "username": "kinmen_kaoliang_liquor",
-        "profile_url": "/@kinmen_kaoliang_liquor",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@kinmen_kaoliang_liquor/post/DW1CApYgVMg",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午7:22"
-      },
-      "replying_to": "@shopee_tw",
-      "content": "\n你感覺壓力很大，是否需要喝一杯我？",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "360",
-          "value": 360
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "14",
-          "value": 14
-        }
-      },
-      "raw_text": "kinmen_kaoliang_liquor 4天 正在回覆@shopee_tw 你感覺壓力很大，是否需要喝一杯我？ 360 14"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW1Dv5cmCl5",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午7:37"
-      },
-      "replying_to": null,
-      "content": "喝十瓶是580度嗎",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "153",
-          "value": 153
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "2",
-          "value": 2
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "shopee_tw 4天 喝十瓶是580度嗎 153 2 1"
-    },
-    {
-      "author": {
-        "username": "taisun_taiji",
-        "profile_url": "/@taisun_taiji",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@taisun_taiji/post/DW1CWJfkgef",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午7:25"
-      },
-      "replying_to": "@shopee_tw",
-      "content": "\n吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉💚我是泰吉",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "25",
-          "value": 25
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "taisun_taiji 4天 正在回覆@shopee_tw 吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉吉💚我是泰吉 25 1"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW1DldBmFEz",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午7:36"
-      },
-      "replying_to": null,
-      "content": "來吃塔吉",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "47",
-          "value": 47
-        }
-      },
-      "raw_text": "shopee_tw 4天 來吃塔吉 47"
-    },
-    {
-      "author": {
-        "username": "raychu.eclat12",
-        "profile_url": "/@raychu.eclat12",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@raychu.eclat12/post/DWuqnbvE9ZK",
-      "timestamp": {
-        "display": "2026-4-5",
-        "exact": "2026年4月5日 星期日 上午8:02"
-      },
-      "replying_to": null,
-      "content": "注意 我老婆辦threads了\n大家講話小心一點",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "3.3 萬",
-          "value": 33000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1,251",
-          "value": 1251
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "201",
-          "value": 201
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "941",
-          "value": 941
-        }
-      },
-      "raw_text": "raychu.eclat12 2026-4-5 注意 我老婆辦threads了 大家講話小心一點 1 / 2 3.3 萬 1,251 201 941"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DW0-35YmHGh",
-      "timestamp": {
-        "display": "4天",
-        "exact": "2026年4月7日 星期二 下午6:55"
-      },
-      "replying_to": null,
-      "content": "你上次不是跟我說要幫你老婆清空購物車？",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "627",
-          "value": 627
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "2",
-          "value": 2
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "2",
-          "value": 2
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "2",
-          "value": 2
-        }
-      },
-      "raw_text": "shopee_tw 4天 你上次不是跟我說要幫你老婆清空購物車？ 627 2 2 2"
     },
     {
       "author": {
@@ -1258,6 +785,719 @@
     },
     {
       "author": {
+        "username": "museacg",
+        "profile_url": "/@museacg",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@museacg/post/DWlKx2zEVFN",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午3:31"
+      },
+      "replying_to": null,
+      "content": "🫸木棉哈隱藏版福袋大公開🫷\n😜4月31日正式登場😜",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "672",
+          "value": 672
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "11",
+          "value": 11
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "2",
+          "value": 2
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "7",
+          "value": 7
+        }
+      },
+      "raw_text": "museacg 2026-4-1 🫸木棉哈隱藏版福袋大公開🫷 😜4月31日正式登場😜 1 / 3 672 11 2 7"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWlMfiSmCw8",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午3:46"
+      },
+      "replying_to": null,
+      "content": "竟然有我❤️",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "567",
+          "value": 567
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "5",
+          "value": 5
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 竟然有我❤️ 567 5"
+    },
+    {
+      "author": {
+        "username": "no_pen",
+        "profile_url": "/@no_pen",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@no_pen/post/DWkieLKAZ3m",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 上午9:39"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n沒愚蝦也好",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "24",
+          "value": 24
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "no_pen 2026-4-1 正在回覆@shopee_tw 沒愚蝦也好 24 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWlHnF6mBq-",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午3:03"
+      },
+      "replying_to": null,
+      "content": "我給到ㄅ級分",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "34",
+          "value": 34
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 我給到ㄅ級分 34"
+    },
+    {
+      "author": {
+        "username": "w206222888",
+        "profile_url": "/@w206222888",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@w206222888/post/DWkg0Ghkmo7",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 上午9:24"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n我喜歡蝦皮",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": 3
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "w206222888 2026-4-1 正在回覆@shopee_tw 我喜歡蝦皮 3 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWlBLTmmF-5",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午2:07"
+      },
+      "replying_to": null,
+      "content": "喜歡你耶\n記住你每個訊息\n想照顧你欸\n偷偷希望能成為\n你的唯一耶\n默默地支持着你\n喜歡你耶",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "36",
+          "value": 36
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "5",
+          "value": 5
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 喜歡你耶 記住你每個訊息 想照顧你欸 偷偷希望能成為 你的唯一耶 默默地支持着你 喜歡你耶 36 1 5"
+    },
+    {
+      "author": {
+        "username": "inffits",
+        "profile_url": "/@inffits",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@inffits/post/DWk0w3cAc6V",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午12:19"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n你是真的蝦皮嗎",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "53",
+          "value": 53
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "inffits 2026-4-1 正在回覆@shopee_tw 你是真的蝦皮嗎 53 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWk1pqJGIdJ",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午12:26"
+      },
+      "replying_to": null,
+      "content": "我是木棉花",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "190",
+          "value": 190
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "2",
+          "value": 2
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "4",
+          "value": 4
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 我是木棉花 190 1 2 4"
+    },
+    {
+      "author": {
+        "username": "jinbing0320",
+        "profile_url": "/@jinbing0320",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@jinbing0320/post/DWkkPO1k61B",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 上午9:54"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n老闆叫你去上班跟蝦皮免運一樣是不會騙人的",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "18",
+          "value": 18
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "jinbing0320 2026-4-1 正在回覆@shopee_tw 老闆叫你去上班跟蝦皮免運一樣是不會騙人的 18 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWk1hrMmPar",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午12:25"
+      },
+      "replying_to": null,
+      "content": "前一個一定是騙人的......\n但蝦皮全站大免運是真的😎",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "31",
+          "value": 31
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 前一個一定是騙人的...... 但蝦皮全站大免運是真的😎 31"
+    },
+    {
+      "author": {
+        "username": "jsx5858",
+        "profile_url": "/@jsx5858",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@jsx5858/post/DWki8n6E9xO",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 上午9:43"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n我老闆心機很重 他說今天放假..",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "46",
+          "value": 46
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "jsx5858 2026-4-1 正在回覆@shopee_tw 我老闆心機很重 他說今天放假.. 46 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWk1WDQmJXG",
+      "timestamp": {
+        "display": "2026-4-1",
+        "exact": "2026年4月1日 星期三 下午12:24"
+      },
+      "replying_to": null,
+      "content": "他一定也是騙你的...",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "75",
+          "value": 75
+        }
+      },
+      "raw_text": "shopee_tw 2026-4-1 他一定也是騙你的... 75"
+    },
+    {
+      "author": {
+        "username": "museacg",
+        "profile_url": "/@museacg",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@museacg/post/DWixSliEaHy",
+      "timestamp": {
+        "display": "2026-3-31",
+        "exact": "2026年3月31日 星期二 下午5:10"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n會送我嗎",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "540",
+          "value": 540
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "8",
+          "value": 8
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": 1
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "5",
+          "value": 5
+        }
+      },
+      "raw_text": "museacg 2026-3-31 正在回覆@shopee_tw 會送我嗎 540 8 1 5"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWi-fJemNbN",
+      "timestamp": {
+        "display": "2026-3-31",
+        "exact": "2026年3月31日 星期二 下午7:05"
+      },
+      "replying_to": null,
+      "content": "你想要哪一款",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "165",
+          "value": 165
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": 1
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "5",
+          "value": 5
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-31 你想要哪一款 165 1 5"
+    },
+    {
+      "author": {
+        "username": "museacg",
+        "profile_url": "/@museacg",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@museacg/post/DWZLs8NkSYd",
+      "timestamp": {
+        "display": "2026-3-27",
+        "exact": "2026年3月27日 星期五 下午11:48"
+      },
+      "replying_to": null,
+      "content": "假日來看暗殺教室好不好🥺",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "8,718",
+          "value": 8718
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "176",
+          "value": 176
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "98",
+          "value": 98
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "179",
+          "value": 179
+        }
+      },
+      "raw_text": "museacg 暗殺教室 2026-3-27 假日來看暗殺教室好不好🥺 1 / 2 8,718 176 98 179"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWZMtX6mEPK",
+      "timestamp": {
+        "display": "2026-3-27",
+        "exact": "2026年3月27日 星期五 下午11:57"
+      },
+      "replying_to": null,
+      "content": "好呀明天見🫪",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "5,919",
+          "value": 5919
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "26",
+          "value": 26
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "10",
+          "value": 10
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "84",
+          "value": 84
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-27 好呀明天見🫪 5,919 26 10 84"
+    },
+    {
+      "author": {
+        "username": "bimay_nagging",
+        "profile_url": "/@bimay_nagging",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@bimay_nagging/post/DWYwF0MD-Ca",
+      "timestamp": {
+        "display": "2026-3-27",
+        "exact": "2026年3月27日 星期五 下午7:47"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n啊哈哈哈哈太棒了👏👏👏👏👏",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2,263",
+          "value": 2263
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "4",
+          "value": 4
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": 1
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "3",
+          "value": 3
+        }
+      },
+      "raw_text": "bimay_nagging 2026-3-27 正在回覆@shopee_tw 啊哈哈哈哈太棒了👏👏👏👏👏 2,263 4 1 3"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWY5JdamK5K",
+      "timestamp": {
+        "display": "2026-3-27",
+        "exact": "2026年3月27日 星期五 下午9:06"
+      },
+      "replying_to": null,
+      "content": null,
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "16",
+          "value": 16
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-27 🫪🫪🫪🫪🫪 16"
+    },
+    {
+      "author": {
+        "username": "mm_1sochen",
+        "profile_url": "/@mm_1sochen",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@mm_1sochen/post/DWTRxO1EUoQ",
+      "timestamp": {
+        "display": "2026-3-25",
+        "exact": "2026年3月25日 星期三 下午4:46"
+      },
+      "replying_to": null,
+      "content": "不覺得學校根本就是一間蝦皮店到店嗎 很多件貨",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "11 萬",
+          "value": 110000
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "330",
+          "value": 330
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "9,364",
+          "value": 9364
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "1.6 萬",
+          "value": 16000
+        }
+      },
+      "raw_text": "mm_1sochen 2026-3-25 不覺得學校根本就是一間蝦皮店到店嗎 很多件貨 11 萬 330 9,364 1.6 萬"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWWhi9pmGi6",
+      "timestamp": {
+        "display": "2026-3-26",
+        "exact": "2026年3月26日 星期四 下午11:01"
+      },
+      "replying_to": null,
+      "content": "好怪，再看一眼",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1.7 萬",
+          "value": 17000
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "15",
+          "value": 15
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "28",
+          "value": 28
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "259",
+          "value": 259
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-26 好怪，再看一眼 1.7 萬 15 28 259"
+    },
+    {
+      "author": {
+        "username": "kinmen_kaoliang_liquor",
+        "profile_url": "/@kinmen_kaoliang_liquor",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@kinmen_kaoliang_liquor/post/DWV5ThhAexl",
+      "timestamp": {
+        "display": "2026-3-26",
+        "exact": "2026年3月26日 星期四 下午5:10"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n你們要不要一起去日本玩？",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "35",
+          "value": 35
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "kinmen_kaoliang_liquor 2026-3-26 正在回覆@shopee_tw 你們要不要一起去日本玩？ 翻譯 35 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWV65ThmNRQ",
+      "timestamp": {
+        "display": "2026-3-26",
+        "exact": "2026年3月26日 星期四 下午5:24"
+      },
+      "replying_to": null,
+      "content": "你要不要也一起",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "13",
+          "value": 13
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-26 你要不要也一起 13 1"
+    },
+    {
+      "author": {
+        "username": "kaokaooo16",
+        "profile_url": "/@kaokaooo16",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@kaokaooo16/post/DWVzemAiQ5z",
+      "timestamp": {
+        "display": "2026-3-26",
+        "exact": "2026年3月26日 星期四 下午4:19"
+      },
+      "replying_to": "@shopee_tw",
+      "content": "\n這提案主管怎麼過ㄉ?",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2",
+          "value": 2
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": 1
+        }
+      },
+      "raw_text": "kaokaooo16 2026-3-26 正在回覆@shopee_tw 這提案主管怎麼過ㄉ? 2 1"
+    },
+    {
+      "author": {
+        "username": "shopee_tw",
+        "profile_url": "/@shopee_tw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@shopee_tw/post/DWV0jlhmAtt",
+      "timestamp": {
+        "display": "2026-3-26",
+        "exact": "2026年3月26日 星期四 下午4:28"
+      },
+      "replying_to": null,
+      "content": "不給主管看就過了",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "8",
+          "value": 8
+        }
+      },
+      "raw_text": "shopee_tw 2026-3-26 不給主管看就過了 8"
+    },
+    {
+      "author": {
         "username": "bimay_nagging",
         "profile_url": "/@bimay_nagging",
         "is_official_account": false
@@ -1304,286 +1544,6 @@
         }
       },
       "raw_text": "shopee_tw 2026-3-26 看來你是冠軍 9"
-    },
-    {
-      "author": {
-        "username": "bimay_nagging",
-        "profile_url": "/@bimay_nagging",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@bimay_nagging/post/DWOo38Yj_ku",
-      "timestamp": {
-        "display": "2026-3-23",
-        "exact": "2026年3月23日 星期一 下午9:31"
-      },
-      "replying_to": null,
-      "content": "這次隔空跟香蕉葛格還有米可白feat，我的內在小孩好開心\n（竟然還可以當矮子反派哇哈哈哈😎）\n拍貼機是蝦皮店到店松菸旗艦店限定唷!\n3/23-3/27 蝦皮P人節\n整點領5折券，$49免運最快當日到\nP人專區：再P也不怕，有蝦皮直營最快當日到解救你！\n@shopee_tw\n#蝦皮P人節 #J人有計畫P人看造化 #蝦皮直營最快當日到",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "194",
-          "value": 194
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "2",
-          "value": 2
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "4",
-          "value": 4
-        }
-      },
-      "raw_text": "bimay_nagging 2026-3-23 這次隔空跟香蕉葛格還有米可白feat，我的內在小孩好開心 （竟然還可以當矮子反派哇哈哈哈😎） 拍貼機是蝦皮店到店松菸旗艦店限定唷! 3/23-3/27 蝦皮P人節 整點領5折券，$49免運最快當日到 P人專區：再P也不怕，有蝦皮直營最快當日到解救你！ @shopee_tw #蝦皮P人節 #J人有計畫P人看造化 #蝦皮直營最快當日到 194 2 4"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DWVzOmaGG5f",
-      "timestamp": {
-        "display": "2026-3-26",
-        "exact": "2026年3月26日 星期四 下午4:17"
-      },
-      "replying_to": null,
-      "content": "好可愛",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "8",
-          "value": 8
-        }
-      },
-      "raw_text": "shopee_tw 2026-3-26 好可愛 8"
-    },
-    {
-      "author": {
-        "username": "714368714368j",
-        "profile_url": "/@714368714368j",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@714368714368j/post/DWVycu9DjHz",
-      "timestamp": {
-        "display": "2026-3-26",
-        "exact": "2026年3月26日 星期四 下午4:10"
-      },
-      "replying_to": "@shopee_tw",
-      "content": "\n木棉花有嗎？",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "8",
-          "value": 8
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "714368714368j 2026-3-26 正在回覆@shopee_tw 木棉花有嗎？ 8 1"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DWVyhdXGO6v",
-      "timestamp": {
-        "display": "2026-3-26",
-        "exact": "2026年3月26日 星期四 下午4:10"
-      },
-      "replying_to": null,
-      "content": "快要有了",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "17",
-          "value": 17
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "shopee_tw 2026-3-26 快要有了 17 1"
-    },
-    {
-      "author": {
-        "username": "ugku.yt",
-        "profile_url": "/@ugku.yt",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@ugku.yt/post/DWVxRTtCfMJ",
-      "timestamp": {
-        "display": "2026-3-26",
-        "exact": "2026年3月26日 星期四 下午3:59"
-      },
-      "replying_to": "@shopee_tw",
-      "content": "\n每個門市都有？",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "4",
-          "value": 4
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "ugku.yt 2026-3-26 正在回覆@shopee_tw 每個門市都有？ 4 1"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DWVxZnAmKPM",
-      "timestamp": {
-        "display": "2026-3-26",
-        "exact": "2026年3月26日 星期四 下午4:01"
-      },
-      "replying_to": null,
-      "content": "松菸旗艦店！",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "8",
-          "value": 8
-        }
-      },
-      "raw_text": "shopee_tw 2026-3-26 松菸旗艦店！ 8"
-    },
-    {
-      "author": {
-        "username": "museacg",
-        "profile_url": "/@museacg",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@museacg/post/DWOM_BYkY8F",
-      "timestamp": {
-        "display": "2026-3-23",
-        "exact": "2026年3月23日 星期一 下午5:29"
-      },
-      "replying_to": null,
-      "content": "聽說大家都會唱（？）👏👏👏",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "3.9 萬",
-          "value": 39000
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "240",
-          "value": 240
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "1,540",
-          "value": 1540
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "838",
-          "value": 838
-        }
-      },
-      "raw_text": "museacg 2026-3-23 聽說大家都會唱（？）👏👏👏 3.9 萬 240 1,540 838"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DWOtAkQGBPR",
-      "timestamp": {
-        "display": "2026-3-23",
-        "exact": "2026年3月23日 星期一 下午10:08"
-      },
-      "replying_to": null,
-      "content": "要一起唱嗎",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "5,936",
-          "value": 5936
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "38",
-          "value": 38
-        },
-        "轉發": {
-          "label": "轉發",
-          "raw": "17",
-          "value": 17
-        },
-        "分享": {
-          "label": "分享",
-          "raw": "60",
-          "value": 60
-        }
-      },
-      "raw_text": "shopee_tw 2026-3-23 要一起唱嗎 5,936 38 17 60"
-    },
-    {
-      "author": {
-        "username": "shiyun_0711",
-        "profile_url": "/@shiyun_0711",
-        "is_official_account": false
-      },
-      "post_url": "https://www.threads.com/@shiyun_0711/post/DWOhuTqkp9b",
-      "timestamp": {
-        "display": "2026-3-23",
-        "exact": "2026年3月23日 星期一 下午8:29"
-      },
-      "replying_to": "@shopee_tw",
-      "content": "\n考前一天才讀書 現在還在延畢中🤡",
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "3",
-          "value": 3
-        },
-        "回覆": {
-          "label": "回覆",
-          "raw": "1",
-          "value": 1
-        }
-      },
-      "raw_text": "shiyun_0711 2026-3-23 正在回覆@shopee_tw 考前一天才讀書 現在還在延畢中🤡 3 1"
-    },
-    {
-      "author": {
-        "username": "shopee_tw",
-        "profile_url": "/@shopee_tw",
-        "is_official_account": true
-      },
-      "post_url": "https://www.threads.com/@shopee_tw/post/DWOh8olGLOR",
-      "timestamp": {
-        "display": "2026-3-23",
-        "exact": "2026年3月23日 星期一 下午8:31"
-      },
-      "replying_to": null,
-      "content": null,
-      "metrics": {
-        "讚": {
-          "label": "讚",
-          "raw": "21",
-          "value": 21
-        }
-      },
-      "raw_text": "shopee_tw 2026-3-23 21"
     }
   ]
 }
