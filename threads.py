@@ -242,6 +242,12 @@ async def extract_post_card(time_locator, username):
             
             const postLink = timeNode ? timeNode.closest('a[href*="/post/"]') : null;
             
+            // 多媒體偵測
+            const imgElements = cardRoot.querySelectorAll('img');
+            const videoElements = cardRoot.querySelectorAll('video');
+            const hasMedia = imgElements.length > 0 || videoElements.length > 0;
+            const imageAlts = Array.from(imgElements).map(img => img.alt).filter(Boolean);
+
             // 提取文本內容（保留換行，避免內容被壓成一行）
             const rawTextOriginal = (cardRoot.innerText || '').replace(/\u00a0/g, ' ');
             const lines = rawTextOriginal
@@ -286,16 +292,16 @@ async def extract_post_card(time_locator, username):
             
             // 提取內容（介於時間和互動之間）
             const contentStart = timeIndex >= 0 ? timeIndex + 1 : 1;
-            let metricStart = lines.length;
+            let metric_start = lines.length;
             for (let i = contentStart; i < lines.length; i++) {
                 if (isMetricLikeLine(lines[i])) {
-                    metricStart = i;
+                    metric_start = i;
                     break;
                 }
             }
 
             let contentLines = lines
-                .slice(contentStart, metricStart)
+                .slice(contentStart, metric_start)
                 .map((line) => {
                     if (replyLine && line === replyLine) {
                         return replyInlineContent || '';
@@ -365,6 +371,8 @@ async def extract_post_card(time_locator, username):
                 content: contentLines.join('\n') || null,
                 metrics,
                 raw_text: normalize(rawTextOriginal).slice(0, 500),
+                has_media: hasMedia,
+                image_alts: imageAlts,
             };
         }
         """,
@@ -372,35 +380,51 @@ async def extract_post_card(time_locator, username):
     )
 
 
-async def collect_visible_posts(page, username, replies_data, seen_post_urls, max_posts):
-    time_count = await page.locator("time").count()
+async def collect_visible_posts(page, username, replies_data, seen_post_urls, max_posts, max_no_growth=5):
+    posts_count = len(replies_data)
+    no_growth_rounds = 0
     batch_added = 0
 
-    for index in range(time_count):
-        time_locator = page.locator("time").nth(index)
-        try:
-            record = await extract_post_card(time_locator, username)
-        except Exception:
-            continue
+    while posts_count < max_posts and no_growth_rounds < max_no_growth:
+        time_elements = await page.locator("time").element_handles()
+        growth = False
 
-        if not record or not record.get("post_url"):
-            continue
+        for time_element in time_elements:
+            try:
+                record = await extract_post_card(time_element, username)
+            except Exception as e:
+                print(f"Error at index {i}: {e}")
+                continue
 
-        for metric in record.get("metrics", {}).values():
-            metric["value"] = parse_count(metric.get("raw"))
+            if not record or not record.get("post_url"):
+                continue
 
-        if record["post_url"] in seen_post_urls:
-            continue
+            for metric in record.get("metrics", {}).values():
+                metric["value"] = parse_count(metric.get("raw"))
 
-        seen_post_urls.add(record["post_url"])
-        replies_data.append(record)
-        batch_added += 1
-        print(f"✓ {record['author']['username']} | {record['timestamp']['display']}")
+            if record["post_url"] in seen_post_urls:
+                continue
 
-        if max_posts is not None and len(replies_data) >= max_posts:
-            return batch_added, True
+            seen_post_urls.add(record["post_url"])
+            replies_data.append(record)
+            batch_added += 1
+            posts_count += 1
+            growth = True
+            print(f"✓ {record['author']['username']} | {record['timestamp']['display']}")
 
-    return batch_added, False
+            if max_posts is not None and posts_count >= max_posts:
+                return batch_added, True
+
+        if not growth:
+            no_growth_rounds += 1
+        else:
+            no_growth_rounds = 0
+
+        if posts_count < max_posts:
+            await page.mouse.wheel(0, 1500)
+            await page.wait_for_timeout(2000)
+
+    return batch_added, posts_count >= max_posts
 
 
 async def run_auto_scrape_on_page(
@@ -557,8 +581,7 @@ if __name__ == "__main__":
     print("🚀 啟動 Threads 爬蟲程式...")
     asyncio.run(
         login_and_scrape_auto(
-            max_posts=2000,
+            max_posts=3300,
             storage_state_path=storage_state_path,
         )
     )
-
