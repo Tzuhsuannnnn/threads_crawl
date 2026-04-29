@@ -63,7 +63,7 @@ async def detect_login_gate(page):
     return False
 
 
-async def scroll_feed_and_wait(page, wait_ms=4500):
+async def scroll_feed_and_wait(page, wait_ms=6000):  # 由 4500 增加到 6000 毫秒（6 秒）
     """Scroll the most likely feed container and wait for potential lazy-loaded content."""
     before_count = await page.locator("time").count()
 
@@ -422,7 +422,7 @@ async def collect_visible_posts(page, username, replies_data, seen_post_urls, ma
 
         if posts_count < max_posts:
             await page.mouse.wheel(0, 1500)
-            await page.wait_for_timeout(2000)
+            await page.wait_for_timeout(4000)  # 由 2000 增加到 4000 毫秒（4 秒)
 
     return batch_added, posts_count >= max_posts
 
@@ -581,7 +581,7 @@ if __name__ == "__main__":
     print("🚀 啟動 Threads 爬蟲程式...")
     asyncio.run(
         login_and_scrape_auto(
-            max_posts=3300,
+            max_posts=1200,
             storage_state_path=storage_state_path,
         )
     )

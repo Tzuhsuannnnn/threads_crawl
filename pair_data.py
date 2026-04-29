@@ -15,8 +15,8 @@ def filter_alts(alts):
     return [alt for alt in alts if not any(k in alt for k in exclude_keywords)]
 
 def main():
-    input_file = 'shopee_tw_replies.json'
-    output_file = 'shopee_tw_paired.csv'
+    input_file = 'netflixtw_replies.json'
+    output_file = 'netflixtw_paired.csv'
 
     # 1. 讀取原始資料
     try:
