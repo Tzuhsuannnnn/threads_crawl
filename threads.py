@@ -557,7 +557,7 @@ if __name__ == "__main__":
     print("🚀 啟動 Threads 爬蟲程式...")
     asyncio.run(
         login_and_scrape_auto(
-            max_posts=50,
+            max_posts=2000,
             storage_state_path=storage_state_path,
         )
     )
