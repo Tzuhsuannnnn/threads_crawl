@@ -26,11 +26,8 @@ def parse_count(value):
     if not text:
         return None
 
-    # 去除前綴中文字
-    text = re.sub(r"^[^\\d]+", "", text)
-
     multiplier = 1
-    suffix = text[-1] if text else ""
+    suffix = text[-1]
     if suffix in {"K", "k"}:
         multiplier = 1000
         text = text[:-1]
@@ -315,7 +312,6 @@ async def extract_post_card(time_locator, username):
                 .filter(line => !/^\d+\s*\/\s*\d+$/.test(normalize(line)))
                 .filter(line => !/^\d+$/.test(normalize(line)))
                 .filter(line => !/^(?:\d+\s*(?:秒|分|小時|天|週|月|年)|[秒分天週月年])$/.test(normalize(line)))
-                .filter(line => !/^讚\\d+|回覆\\d+|轉發\\d+|分享\\d+/.test(line))
                 .map(line => normalize(line));
 
             // Fallback: when line slicing fails (common on short brand replies), derive content from raw text.
