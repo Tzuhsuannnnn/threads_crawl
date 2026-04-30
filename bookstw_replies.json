@@ -1,0 +1,903 @@
+{
+  "username": "bookstw",
+  "source_url": "https://www.threads.com/@bookstw/replies",
+  "scraped_at": "2026-04-30T05:07:55.857070+00:00",
+  "max_posts": 30,
+  "stop_reason": "max_posts",
+  "posts": [
+    {
+      "author": {
+        "username": "sophia_hsiao00324",
+        "profile_url": "/@sophia_hsiao00324",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@sophia_hsiao00324/post/DXvOIfKk__l",
+      "timestamp": {
+        "display": "3小時",
+        "exact": "2026年4月30日 星期四 上午9:44"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n這樣讓我不讀都不行了！好有趣！",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "sophia_hsiao00324 3小時 正在回覆@bookstw 這樣讓我不讀都不行了！好有趣！ 3 1",
+      "has_media": true,
+      "image_alts": [
+        "sophia_hsiao00324的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXvSFAems8s",
+      "timestamp": {
+        "display": "2小時",
+        "exact": "2026年4月30日 星期四 上午10:19"
+      },
+      "replying_to": null,
+      "content": "要🙂‍↔️👇🍉\nbookstw.link/8zhjm…\nbooks.com.tw\n賣瓜的人【文壇年度耀眼新星】",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 2小時 要🙂‍↔️👇🍉 bookstw.link/8zhjm… books.com.tw 賣瓜的人【文壇年度耀眼新星】 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照",
+        "賣瓜的人【文壇年度耀眼新星】"
+      ]
+    },
+    {
+      "author": {
+        "username": "xaxa_reading",
+        "profile_url": "/@xaxa_reading",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@xaxa_reading/post/DXvMwORAX-o",
+      "timestamp": {
+        "display": "3小時",
+        "exact": "2026年4月30日 星期四 上午9:32"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n素玉之子🤝🤣",
+      "metrics": {
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "xaxa_reading 3小時 正在回覆@bookstw 素玉之子🤝🤣 1",
+      "has_media": true,
+      "image_alts": [
+        "xaxa_reading的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXvNGrggbdh",
+      "timestamp": {
+        "display": "3小時",
+        "exact": "2026年4月30日 星期四 上午9:35"
+      },
+      "replying_to": null,
+      "content": "薯條🤝三位素玉準備組Ｓ.Ｈ.Ｅ（沒有任何一位素玉答應）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 3小時 薯條🤝三位素玉準備組Ｓ.Ｈ.Ｅ（沒有任何一位素玉答應） 2",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "xaxa_reading",
+        "profile_url": "/@xaxa_reading",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@xaxa_reading/post/DXuE6uWkYP6",
+      "timestamp": {
+        "display": "14小時",
+        "exact": "2026年4月29日 星期三 下午11:04"
+      },
+      "replying_to": null,
+      "content": "我真的是要發瘋，因為我媽也叫素玉🤣（突然出賣媽媽\nbookstw\n全片重點：博小編與傑尼的媽媽都叫素玉（？？不是吧）\n博小編直搗（？）傑尼新書分享會\n還找傑尼拍片，當然是為了超重要的事✨\n傑尼 aka 洪倪的首部散文創作\n《賣瓜的人》終於開賣啦（線上尖叫）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "23",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "4",
+          "value": null
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": null
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "xaxa_reading 14小時 我真的是要發瘋，因為我媽也叫素玉🤣（突然出賣媽媽 bookstw 15小時 全片重點：博小編與傑尼的媽媽都叫素玉（？？不是吧） 博小編直搗（？）傑尼新書分享會 還找傑尼拍片，當然是為了超重要的事✨ 傑尼 aka 洪倪的首部散文創作 《賣瓜的人》終於開賣啦（線上尖叫） 1 / 2 bookstw 425 11 11 22 23 4 1 2",
+      "has_media": true,
+      "image_alts": [
+        "xaxa_reading的大頭貼照",
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXt8NQIGpH9",
+      "timestamp": {
+        "display": "15小時",
+        "exact": "2026年4月29日 星期三 下午9:48"
+      },
+      "replying_to": null,
+      "content": "全片重點：博小編與傑尼的媽媽都叫素玉（？？不是吧）\n博小編直搗（？）傑尼新書分享會\n還找傑尼拍片，當然是為了超重要的事✨\n傑尼 aka 洪倪的首部散文創作\n《賣瓜的人》終於開賣啦（線上尖叫）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "425",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "11",
+          "value": null
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "11",
+          "value": null
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "22",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 15小時 全片重點：博小編與傑尼的媽媽都叫素玉（？？不是吧） 博小編直搗（？）傑尼新書分享會 還找傑尼拍片，當然是為了超重要的事✨ 傑尼 aka 洪倪的首部散文創作 《賣瓜的人》終於開賣啦（線上尖叫） 1 / 2 bookstw 425 11 11 22",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXvK4UYAXd6",
+      "timestamp": {
+        "display": "3小時",
+        "exact": "2026年4月30日 星期四 上午9:16"
+      },
+      "replying_to": null,
+      "content": "！！！！？發芬",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "14",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 3小時 ！！！！？發芬 14 2",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "good.morning.my.dear.friend",
+        "profile_url": "/@good.morning.my.dear.friend",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@good.morning.my.dear.friend/post/DXuKM53jzXC",
+      "timestamp": {
+        "display": "13小時",
+        "exact": "2026年4月29日 星期三 下午11:50"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n衣服真的很好看欸",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "good.morning.my.dear.friend 13小時 正在回覆@bookstw 衣服真的很好看欸 3 1",
+      "has_media": true,
+      "image_alts": [
+        "good.morning.my.dear.friend的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXvK1i4AdAg",
+      "timestamp": {
+        "display": "3小時",
+        "exact": "2026年4月30日 星期四 上午9:15"
+      },
+      "replying_to": null,
+      "content": "真ㄉ🌹有品味ㄉ人都會有有品味ㄉ衣🪷",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 3小時 真ㄉ🌹有品味ㄉ人都會有有品味ㄉ衣🪷 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "thiloliu",
+        "profile_url": "/@thiloliu",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@thiloliu/post/DXuEJuHCJFB",
+      "timestamp": {
+        "display": "14小時",
+        "exact": "2026年4月29日 星期三 下午10:58"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n有出電子書嗎",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "thiloliu 14小時 正在回覆@bookstw 有出電子書嗎 3 2",
+      "has_media": true,
+      "image_alts": [
+        "thiloliu的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXvClHUgXTJ",
+      "timestamp": {
+        "display": "5小時",
+        "exact": "2026年4月30日 星期四 上午8:03"
+      },
+      "replying_to": null,
+      "content": "電子書5/1開賣喔！\n還有收錄傑尼跟素玉的小對談🤩",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 5小時 電子書5/1開賣喔！ 還有收錄傑尼跟素玉的小對談🤩 2",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "chicagocubs777",
+        "profile_url": "/@chicagocubs777",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@chicagocubs777/post/DXt-SHElAZ_",
+      "timestamp": {
+        "display": "15小時",
+        "exact": "2026年4月29日 星期三 下午10:06"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n我知道博小編妳等這一天等很久了，絕對很爽吧？",
+      "metrics": {
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "chicagocubs777 15小時 正在回覆@bookstw 我知道博小編妳等這一天等很久了，絕對很爽吧？ 1",
+      "has_media": true,
+      "image_alts": [
+        "chicagocubs777的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXt_03CAQYo",
+      "timestamp": {
+        "display": "14小時",
+        "exact": "2026年4月29日 星期三 下午10:20"
+      },
+      "replying_to": null,
+      "content": "超爽！\n沒想到能等到傑尼寶貝的ISBN碼誕生！太爽了！\n➡️ bookstw.link/8zhjh…\nbooks.com.tw\n賣瓜的人【文壇年度耀眼新星】（限量親簽版）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 14小時 超爽！ 沒想到能等到傑尼寶貝的ISBN碼誕生！太爽了！ ➡️ bookstw.link/8zhjh… books.com.tw 賣瓜的人【文壇年度耀眼新星】（限量親簽版） 3",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照",
+        "賣瓜的人【文壇年度耀眼新星】（限量親簽版）"
+      ]
+    },
+    {
+      "author": {
+        "username": "ytw_04",
+        "profile_url": "/@ytw_04",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@ytw_04/post/DXsCb3cjabJ",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月29日 星期三 上午4:04"
+      },
+      "replying_to": null,
+      "content": "雖然博客來小編很可愛，但網站用戶體驗真的極差😖\n因Email驗證有bug跟客服聯繫，填好敘述並附上截圖檔後，點選下一步竟然跳出「系統忙碌中」的視窗？？？\n原來的bug還在，然後開一張bug ticket還這麼困難，IT部門到底在幹嘛🥲\nytw_04\n正在回覆 @bookstw\n小編你們網站有bug欸，請幫忙開一個ticket。\n下面說60秒沒收到驗證碼請點擊重新發送，但發送鍵倒數秒數超過20000秒欸，反灰根本不能按。\n然後最初的驗證碼也沒收到。",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "3",
+          "value": null
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": null
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "1",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "2",
+          "value": null
+        }
+      },
+      "raw_text": "ytw_04 1天 雖然博客來小編很可愛，但網站用戶體驗真的極差😖 因Email驗證有bug跟客服聯繫，填好敘述並附上截圖檔後，點選下一步竟然跳出「系統忙碌中」的視窗？？？ 原來的bug還在，然後開一張bug ticket還這麼困難，IT部門到底在幹嘛🥲 ytw_04 6天 正在回覆 @bookstw 小編你們網站有bug欸，請幫忙開一個ticket。 下面說60秒沒收到驗證碼請點擊重新發送，但發送鍵倒數秒數超過20000秒欸，反灰根本不能按。 然後最初的驗證碼也沒收到。 2 1 1 3 2 1",
+      "has_media": true,
+      "image_alts": [
+        "ytw_04的大頭貼照",
+        "Photo by Yuting on April 28, 2026. May be an image of text.",
+        "ytw_04的大頭貼照",
+        "Photo by Yuting on April 23, 2026. May be an image of ticket stub and text that says 'Email信籍驗證Emailerfication Email信箱驗證 Email verification Email 重新發送驗證碼2 21423 Resend verification Resendverlfication.code(sec) code (sec) 請留意驗證信是否被歸類於垃圾郵件 請留這技體信是否被解類於垃圾那件如果在0後仍来收容 如果在60秒後仍未收到 驗證碼， 請您點選重新發送 Please check your spam folder for Plesoekstettte the verification email. If you haven't received the verification code after 60 seconds, please click on 'Resend'. Email驗證碼 Emaill 驗證碼 Email Verification Code 請確認網頁識別碼為 TMMC 有效期限 2026/04/23 16:42:38 Please Fleas.cofimtiewebaede confirm the webpage identifier as: TMMC Expiration date: 2026/04/23 Expirationdale:2026/4/2316423 16:42:38. 取消 Cancel'."
+      ]
+    },
+    {
+      "author": {
+        "username": "ytw_04",
+        "profile_url": "/@ytw_04",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@ytw_04/post/DXd_xECDTbz",
+      "timestamp": {
+        "display": "6天",
+        "exact": "2026年4月23日 星期四 下午5:11"
+      },
+      "replying_to": null,
+      "content": "正在回覆 @bookstw\n小編你們網站有bug欸，請幫忙開一個ticket。\n下面說60秒沒收到驗證碼請點擊重新發送，但發送鍵倒數秒數超過20000秒欸，反灰根本不能按。\n然後最初的驗證碼也沒收到。",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2",
+          "value": null
+        },
+        "轉發": {
+          "label": "轉發",
+          "raw": "1",
+          "value": null
+        },
+        "分享": {
+          "label": "分享",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "ytw_04 6天 正在回覆 @bookstw 小編你們網站有bug欸，請幫忙開一個ticket。 下面說60秒沒收到驗證碼請點擊重新發送，但發送鍵倒數秒數超過20000秒欸，反灰根本不能按。 然後最初的驗證碼也沒收到。 2 1 1",
+      "has_media": true,
+      "image_alts": [
+        "ytw_04的大頭貼照",
+        "Photo by Yuting on April 23, 2026. May be an image of ticket stub and text that says 'Email信籍驗證Emailerfication Email信箱驗證 Email verification Email 重新發送驗證碼2 21423 Resend verification Resendverlfication.code(sec) code (sec) 請留意驗證信是否被歸類於垃圾郵件 請留這技體信是否被解類於垃圾那件如果在0後仍来收容 如果在60秒後仍未收到 驗證碼， 請您點選重新發送 Please check your spam folder for Plesoekstettte the verification email. If you haven't received the verification code after 60 seconds, please click on 'Resend'. Email驗證碼 Emaill 驗證碼 Email Verification Code 請確認網頁識別碼為 TMMC 有效期限 2026/04/23 16:42:38 Please Fleas.cofimtiewebaede confirm the webpage identifier as: TMMC Expiration date: 2026/04/23 Expirationdale:2026/4/2316423 16:42:38. 取消 Cancel'."
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXtM3H9mp0m",
+      "timestamp": {
+        "display": "22小時",
+        "exact": "2026年4月29日 星期三 下午2:54"
+      },
+      "replying_to": null,
+      "content": "您好，博小編稍早有轉達給相關單位，也請同仁測試過可以正常發信，如果仍然沒辦法寄出，建議可以透過電話客服／線上文字客服 詢問喔～\n【客戶服務專線】：02-26535588\n【線上文字服務】：請於服務時間到臉書私訊，點選『轉真人客服』按鈕，待成功轉接後將由真人客服為您服務。\n◆ 服務時間說明如下：\n電話／文字客服（真人)：週一至週五 09:00～18:00（國定假日除外）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "10",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 22小時 您好，博小編稍早有轉達給相關單位，也請同仁測試過可以正常發信，如果仍然沒辦法寄出，建議可以透過電話客服／線上文字客服 詢問喔～ 【客戶服務專線】：02-26535588 【線上文字服務】：請於服務時間到臉書私訊，點選『轉真人客服』按鈕，待成功轉接後將由真人客服為您服務。 ◆ 服務時間說明如下： 電話／文字客服（真人)：週一至週五 09:00～18:00（國定假日除外） 10",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "abby255689",
+        "profile_url": "/@abby255689",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@abby255689/post/DXrbVmNmqp9",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:22"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n終於等到秀鳳阿姨直播了",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "abby255689 1天 正在回覆@bookstw 終於等到秀鳳阿姨直播了 1 1",
+      "has_media": true,
+      "image_alts": [
+        "abby255689的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXrcH8hmpRA",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:29"
+      },
+      "replying_to": null,
+      "content": "等待⏰ 一切 都“值得]!!🌹🫰",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 等待⏰ 一切 都“值得]!!🌹🫰 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "monstarbaby",
+        "profile_url": "/@monstarbaby",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@monstarbaby/post/DXrbHGmCbRe",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:21"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n請原地出道🫶🫶🫶",
+      "metrics": {
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "monstarbaby 1天 正在回覆@bookstw 請原地出道🫶🫶🫶 1",
+      "has_media": true,
+      "image_alts": [
+        "monstarbaby的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXrb9avGtAY",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:28"
+      },
+      "replying_to": null,
+      "content": "哈😆秀鳳阿 姨 ‘‘遲暮之年” {大器晚成[🪷🌹",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 哈😆秀鳳阿 姨 ‘‘遲暮之年” {大器晚成[🪷🌹 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "hahatai_official",
+        "profile_url": "/@hahatai_official",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@hahatai_official/post/DXrMWYJkkil",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午8:12"
+      },
+      "replying_to": null,
+      "content": "賣瓜的人",
+      "metrics": {},
+      "raw_text": "hahatai_official 賣瓜的人 1天",
+      "has_media": false,
+      "image_alts": []
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXrbfwGmjOC",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:24"
+      },
+      "replying_to": null,
+      "content": "蛤！！！出書！！？？！\n⬇️是在說這本嗎？？？？？？！！！\n《賣瓜的人》bookstw.link/8z3ja…\n⬆️該不會是在說這個吧？！？？？！\n封面很好看的這本嗎？\n內容也好看的這本嗎？\nbooks.com.tw\n賣瓜的人【文壇年度耀眼新星】（限量親簽版）",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "29",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 蛤！！！出書！！？？！ ⬇️是在說這本嗎？？？？？？！！！ 《賣瓜的人》bookstw.link/8z3ja… ⬆️該不會是在說這個吧？！？？？！ 封面很好看的這本嗎？ 內容也好看的這本嗎？ books.com.tw 賣瓜的人【文壇年度耀眼新星】（限量親簽版） 29",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照",
+        "賣瓜的人【文壇年度耀眼新星】（限量親簽版）"
+      ]
+    },
+    {
+      "author": {
+        "username": "bonekou",
+        "profile_url": "/@bonekou",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@bonekou/post/DXrUmWej77S",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午9:24"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n中途一直封鎖惡意言論這細節超好笑\n阿姨動態視力好好",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "9",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bonekou 1天 正在回覆@bookstw 中途一直封鎖惡意言論這細節超好笑 阿姨動態視力好好 9 1",
+      "has_media": true,
+      "image_alts": [
+        "bonekou的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXrbO_vGkEw",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:22"
+      },
+      "replying_to": null,
+      "content": "秀鳳阿姨 讀書人 平時興趣\n是 打「LOL）🪷哈😆秀鳳愛說笑🦋開玩笑滴 秀鳳不會用{電腦]❌\n幸福🫶美滿🌹晚安😴🪷",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "8",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 秀鳳阿姨 讀書人 平時興趣 是 打「LOL）🪷哈😆秀鳳愛說笑🦋開玩笑滴 秀鳳不會用{電腦]❌ 幸福🫶美滿🌹晚安😴🪷 8 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "tc2xyrm19_twn",
+        "profile_url": "/@tc2xyrm19_twn",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@tc2xyrm19_twn/post/DXrWfBkEo0F",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午9:40"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n秀鳳阿姨的大粉絲簽到😍",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "2",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "tc2xyrm19_twn 1天 正在回覆@bookstw 秀鳳阿姨的大粉絲簽到😍 2 1",
+      "has_media": true,
+      "image_alts": [
+        "tc2xyrm19_twn的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXrbAAvmhEv",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:20"
+      },
+      "replying_to": null,
+      "content": "秀鳳阿姨 /感/謝💗你🙏感恩🌹🫰\n幸福🫶美滿🌹晚安😴🪷",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 秀鳳阿姨 /感/謝💗你🙏感恩🌹🫰 幸福🫶美滿🌹晚安😴🪷 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "changchungfang",
+        "profile_url": "/@changchungfang",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@changchungfang/post/DXrWRa6kUeh",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午9:38"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n阿姨手速真的很快，我都來不及看完留言就刪了😂",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "8",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "changchungfang 1天 正在回覆@bookstw 阿姨手速真的很快，我都來不及看完留言就刪了😂 8 1",
+      "has_media": true,
+      "image_alts": [
+        "changchungfang的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXra7xaGk98",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:19"
+      },
+      "replying_to": null,
+      "content": "秀鳳阿姨平 時 [愛健 ,身}💪 哈😆💕\n幸福🫶美滿🌹晚安😴🪷",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "5",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 秀鳳阿姨平 時 [愛健 ,身}💪 哈😆💕 幸福🫶美滿🌹晚安😴🪷 5",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "suika28",
+        "profile_url": "/@suika28",
+        "is_official_account": false
+      },
+      "post_url": "https://www.threads.com/@suika28/post/DXrW78zk-Mz",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午9:44"
+      },
+      "replying_to": "@bookstw",
+      "content": "\n超好笑",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        },
+        "回覆": {
+          "label": "回覆",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "suika28 1天 正在回覆@bookstw 超好笑 1 1",
+      "has_media": true,
+      "image_alts": [
+        "suika28的大頭貼照",
+        "Threads 用戶大頭貼照"
+      ]
+    },
+    {
+      "author": {
+        "username": "bookstw",
+        "profile_url": "/@bookstw",
+        "is_official_account": true
+      },
+      "post_url": "https://www.threads.com/@bookstw/post/DXra0EvGpx9",
+      "timestamp": {
+        "display": "1天",
+        "exact": "2026年4月28日 星期二 下午10:18"
+      },
+      "replying_to": null,
+      "content": "開心😄🌹🪷祝福🙏美滿🦋",
+      "metrics": {
+        "讚": {
+          "label": "讚",
+          "raw": "1",
+          "value": null
+        }
+      },
+      "raw_text": "bookstw 1天 開心😄🌹🪷祝福🙏美滿🦋 1",
+      "has_media": true,
+      "image_alts": [
+        "bookstw的大頭貼照"
+      ]
+    }
+  ]
+}
