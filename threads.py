@@ -26,6 +26,11 @@ def parse_count(value):
     if not text:
         return None
 
+    # 新增這行：強制濾除字串開頭的任何中文字或非數字字元 (例如把 "讚5 萬" 變成 "5 萬")
+    text = re.sub(r"^[^\d]+", "", text)
+    if not text:
+        return None
+
     multiplier = 1
     suffix = text[-1]
     if suffix in {"K", "k"}:
@@ -38,7 +43,7 @@ def parse_count(value):
         multiplier = 10000
         text = text[:-1]
 
-    text = text.replace(",", "")
+    text = text.replace(",", "").strip() # 加入 strip() 確保沒有殘留空白
     try:
         number = float(text)
     except ValueError:
@@ -139,7 +144,11 @@ async def scroll_feed_and_wait(page, wait_ms=6000):  # 由 4500 增加到 6000 �
 
 
 async def extract_post_card(time_locator, username):
-    """簡化版本：直接提取 time 周圍的資訊"""
+    """
+    DOM 物理分離版：
+    1. 透過尋找「讚/回覆」的圖示來定位卡片，不再受按鈕數量的影響。
+    2. 透過 DOM 節點直接抓取數據，讓內文的 1/2 完全無法干擾 Metrics。
+    """
     return await time_locator.evaluate(
         r"""
         (node, username) => {
@@ -147,232 +156,117 @@ async def extract_post_card(time_locator, username):
                 return (value || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
             }
 
-            function normalizeLine(value) {
-                return (value || '').replace(/\u00a0/g, ' ').trim();
-            }
-
-            function getAuthorLinks(root) {
-                return Array.from(root.querySelectorAll('a[href^="/@"]'))
-                    .filter((a) => {
-                        const href = a.getAttribute('href') || '';
-                        // Keep profile links only, ignore /post/ links.
-                        return /^\/@[^/]+$/.test(href);
-                    });
-            }
-
-            function getMetricButtons(root) {
-                return Array.from(root.querySelectorAll('div[role="button"]')).filter((btn) => {
-                    const text = normalize(btn.innerText || '');
-                    const svg = btn.querySelector('svg[aria-label]');
-                    return !!svg || !!text;
-                });
-            }
-
-            function escapeRegExp(value) {
-                return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            }
-
-            function isMetricLikeLine(line) {
-                const text = normalize(line);
-                if (!text) return false;
-                if (/^\d+\s*\/\s*\d+$/.test(text)) return true; // e.g. 1/2
-                if (/^\d{1,3}(?:,\d{3})*(?:\.\d+)?(?:\s*[萬KMB])?$/i.test(text)) return true;
-                return false;
-            }
-
-            function isLowQualityContent(text) {
-                const t = normalize(text);
-                if (!t) return true;
-                // If there is no letter/number in any language, treat as low quality.
-                if (!/[\p{L}\p{N}]/u.test(t)) return true;
-                if (/^[天年月日時分秒週日]$/.test(t)) return true; // residual single time unit char
-                if (t.length <= 1) return true;
-                return false;
-            }
-
-            // 從 time 元素向上找卡片根元素（避免抓到過淺的 header 容器）
+            // 1. 尋找卡片根節點 (最安全的找法：找到包含作者與互動圖示的容器)
             function findCardRoot(timeNode) {
                 let current = timeNode;
                 let depth = 0;
-                let fallback = null;
-                
-                while (current && current !== document.body && depth < 20) {
-                    const authorLinks = getAuthorLinks(current);
-                    const metricButtons = getMetricButtons(current);
-                    const hasPostAnchor = !!timeNode.closest('a[href*="/post/"]');
+                while (current && current !== document.body && depth < 30) {
+                    const hasAuthor = !!current.querySelector('a[href^="/@"]');
+                    // 只要有這些圖示存在 (即使沒人按讚，圖示也一定在)，就代表這是卡片容器！
+                    const hasActionBar = !!current.querySelector('svg[aria-label="讚"]') || 
+                                         !!current.querySelector('svg[aria-label="Like"]') ||
+                                         !!current.querySelector('svg[aria-label="回覆"]') ||
+                                         !!current.querySelector('svg[aria-label="Reply"]');
                     
-                    // 優先：同時包含作者、時間、互動按鈕的卡片。
-                    if (authorLinks.length > 0 && metricButtons.length >= 2 && current.contains(timeNode)) {
-                        const text = normalize(current.innerText || '');
-                        if (text.length >= 16 && hasPostAnchor) {
-                            return current;
-                        }
+                    if (hasAuthor && hasActionBar) {
+                        return current;
                     }
-
-                    // 次佳：記錄包含作者+時間的較完整容器。
-                    if (!fallback && authorLinks.length > 0 && current.contains(timeNode)) {
-                        const text = normalize(current.innerText || '');
-                        if (text.length >= 10) {
-                            fallback = current;
-                        }
-                    }
-                    
-                    depth++;
                     current = current.parentElement;
+                    depth++;
                 }
                 
+                // 備用方案
+                let fallback = timeNode;
+                for(let i=0; i<8; i++) { if(fallback.parentElement) fallback = fallback.parentElement; }
                 return fallback;
             }
 
-            const timeElement = node;
-            const timeOuter = timeElement;
-            const cardRoot = findCardRoot(timeElement);
-            
-            if (!cardRoot) {
-                return null;
-            }
+            const cardRoot = findCardRoot(node);
+            if (!cardRoot) return null;
 
-            // 提取基本資訊
-            const authorLinks = getAuthorLinks(cardRoot);
-            const authorLink = authorLinks.find((link) => normalize(link.textContent)) || authorLinks[0] || null;
+            // 2. 抓取作者與時間
+            const authorLinks = Array.from(cardRoot.querySelectorAll('a[href^="/@"]'))
+                .filter(a => /^\/@[^/]+$/.test(a.getAttribute('href') || ''));
+            const mainAuthor = authorLinks[0] ? normalize(authorLinks[0].textContent) : null;
             
-            const timeNode = cardRoot.querySelector('time');
-            const timeText = timeNode ? normalize(timeNode.innerText) : '';
-            const timeTitle = timeNode ? timeNode.getAttribute('title') : null;
-            
-            const postLink = timeNode ? timeNode.closest('a[href*="/post/"]') : null;
-            
-            // 多媒體偵測
-            const imgElements = cardRoot.querySelectorAll('img');
-            const videoElements = cardRoot.querySelectorAll('video');
-            const hasMedia = imgElements.length > 0 || videoElements.length > 0;
-            const imageAlts = Array.from(imgElements).map(img => img.alt).filter(Boolean);
+            const timeText = normalize(node.innerText);
+            const postLink = node.closest('a') ? node.closest('a').href : (cardRoot.querySelector('a[href*="/post/"]')?.href || null);
 
-            // 提取文本內容（保留換行，避免內容被壓成一行）
-            const rawTextOriginal = (cardRoot.innerText || '').replace(/\u00a0/g, ' ');
-            const lines = rawTextOriginal
-                .split('\n')
-                .map((line) => normalizeLine(line))
-                .filter(Boolean);
-            
-            // 從時間開始向後提取內容
-            const timeIndex = timeText ? lines.indexOf(timeText) : -1;
-            
-            // 提取互動按鈕信息
-            const buttons = getMetricButtons(cardRoot);
+            // 3. 物理提取 Metrics (絕對不受內文 1/2 干擾)
             const metrics = {};
-            
-            // 尋找帶有 aria-label 的 svg（指示互動類型）
-            for (const button of buttons) {
-                const svg = button.querySelector('svg[aria-label]');
-                if (!svg) continue;
-                
-                const label = svg.getAttribute('aria-label');
-                // 保留所有找到的互動類型
-                const count = normalize(button.innerText);
-                if (count && label) {
-                    metrics[label.toLowerCase()] = {
-                        label,
-                        raw: count || null,
-                    };
-                }
-            }
-            
-            // 提取回覆人信息
-            const replyLine = lines.find((line) => /^(Replying to @|正在回覆@)/.test(line)) || null;
-            let replyTo = null;
-            let replyInlineContent = null;
-            if (replyLine) {
-                const m = replyLine.match(/^(?:Replying to\s+@|正在回覆@)([^\s]+)\s*(.*)$/);
-                if (m) {
-                    replyTo = '@' + normalize(m[1]);
-                    replyInlineContent = normalize(m[2] || '');
-                }
-            }
-            
-            // 提取內容（介於時間和互動之間）
-            const contentStart = timeIndex >= 0 ? timeIndex + 1 : 1;
-            let metric_start = lines.length;
-            for (let i = contentStart; i < lines.length; i++) {
-                if (isMetricLikeLine(lines[i])) {
-                    metric_start = i;
-                    break;
-                }
-            }
-
-            let contentLines = lines
-                .slice(contentStart, metric_start)
-                .map((line) => {
-                    if (replyLine && line === replyLine) {
-                        return replyInlineContent || '';
+            const buttons = Array.from(cardRoot.querySelectorAll('div[role="button"]'));
+            for (const btn of buttons) {
+                const svg = btn.querySelector('svg[aria-label]');
+                if (svg) {
+                    const label = svg.getAttribute('aria-label');
+                    const count = normalize(btn.innerText);
+                    if (label) {
+                        metrics[label.toLowerCase()] = { label, raw: count || null };
                     }
-                    return line;
-                })
-                .filter(line => line !== 'Translate' && line !== '翻譯')
-                .filter(line => !/^\d+\s*\/\s*\d+$/.test(normalize(line)))
-                .filter(line => !/^\d+$/.test(normalize(line)))
-                .filter(line => !/^(?:\d+\s*(?:秒|分|小時|天|週|月|年)|[秒分天週月年])$/.test(normalize(line)))
-                .map(line => normalize(line));
-
-            // Fallback: when line slicing fails (common on short brand replies), derive content from raw text.
-            if (contentLines.length === 0) {
-                let fallback = normalize(rawTextOriginal);
-
-                const authorText = authorLink ? normalize(authorLink.textContent || '') : '';
-                if (authorText) {
-                    fallback = fallback.replace(new RegExp('^' + escapeRegExp(authorText) + '\\s*'), '');
-                }
-
-                if (timeText) {
-                    fallback = fallback.replace(new RegExp(escapeRegExp(timeText), 'g'), ' ');
-                }
-
-                if (replyLine) {
-                    fallback = fallback.replace(new RegExp(escapeRegExp(normalize(replyLine))), ' ');
-                }
-
-                fallback = fallback.replace(/\b(Translate|翻譯)\b/g, ' ');
-                fallback = fallback.replace(/\b\d+\s*\/\s*\d+\b/g, ' ');
-                fallback = fallback.replace(/(?:^|\s)\d+\s*(?:秒|分|小時|天|週|月|年)(?=\s|$)/g, ' ');
-                fallback = fallback.replace(/(?:^|\s)(?:秒|分|小時|天|週|月|年)(?=\s|$)/g, ' ');
-
-                // Remove known metric raw values (usually trailing numbers)
-                for (const metric of Object.values(metrics)) {
-                    const raw = normalize(metric.raw || '');
-                    if (!raw) continue;
-                    fallback = fallback.replace(new RegExp('\\b' + escapeRegExp(raw) + '\\b', 'g'), ' ');
-                }
-
-                fallback = normalize(fallback);
-                if (fallback && !isLowQualityContent(fallback)) {
-                    contentLines = [fallback];
                 }
             }
 
-            if (contentLines.length > 0) {
-                const joined = normalize(contentLines.join(' '));
-                if (isLowQualityContent(joined) || /^(?:\d+\s*(?:秒|分|小時|天|週|月|年)|[秒分天週月年])$/.test(joined)) {
-                    contentLines = [];
-                }
+            // 4. 抓取 回覆給誰
+            let replyingTo = null;
+            const rawText = normalize(cardRoot.innerText);
+            const replyMatch = rawText.match(/(?:正在回覆|Replying to)\s*(@[^\s]+)/);
+            if (replyMatch) {
+                replyingTo = replyMatch[1];
             }
+
+            // 5. 抓取內文
+            let contentLines = [];
+            // Threads 的主要文字都放在 dir="auto" 的 span 裡
+            const textSpans = Array.from(cardRoot.querySelectorAll('span[dir="auto"]'));
             
+            textSpans.forEach(span => {
+                // 如果文字是在按鈕裡，跳過
+                if (span.closest('div[role="button"]')) return;
+                // 如果文字是作者名稱或頭像連結，跳過
+                if (span.closest('a[href^="/@"]')) return;
+                
+                const text = normalize(span.innerText);
+                if (!text) return;
+                
+                if (text === timeText) return;
+                if (text === '>' || text === '·' || text === 'Translate' || text === '翻譯') return;
+                if (/^\d+\s*[秒分天週月年]$/.test(text) || /^\d+\s*小時$/.test(text)) return;
+                if (text.includes('正在回覆') || text.includes('Replying to')) return;
+                
+                // 剩下的就是純淨內文！(包含您提供的 HTML 中 1/2 的外層 span)
+                contentLines.push(text);
+            });
+
+            // 萬一 DOM 抓取失敗的備用提取法 (確保一定有內容)
+            let finalContent = contentLines.join('\n');
+            if (!finalContent) {
+                let fbText = rawText;
+                if (mainAuthor) fbText = fbText.replace(mainAuthor, '');
+                if (timeText) fbText = fbText.replace(timeText, '');
+                for (const m of Object.values(metrics)) {
+                    if (m.raw) fbText = fbText.replace(m.raw, '');
+                }
+                fbText = fbText.replace(/正在回覆|Replying to|Translate|翻譯|·|>/g, '');
+                fbText = fbText.replace(/@[^\s]+/g, ''); 
+                finalContent = normalize(fbText);
+            }
+
             return {
                 author: {
-                    username: authorLink ? normalize(authorLink.textContent) : null,
-                    profile_url: authorLink ? authorLink.getAttribute('href') : null,
-                    is_official_account: authorLink ? normalize(authorLink.textContent) === username : false,
+                    username: mainAuthor,
+                    is_official_account: mainAuthor === username,
                 },
-                post_url: postLink ? postLink.href : null,
+                post_url: postLink,
                 timestamp: {
-                    display: timeText || null,
-                    exact: timeTitle || null,
+                    display: timeText,
+                    exact: node.getAttribute('title') || null,
                 },
-                replying_to: replyTo,
-                content: contentLines.join('\n') || null,
+                replying_to: replyingTo,
+                content: finalContent || null,
                 metrics,
-                raw_text: normalize(rawTextOriginal).slice(0, 500),
-                has_media: hasMedia,
-                image_alts: imageAlts,
+                raw_text: rawText.slice(0, 500),
+                has_media: cardRoot.querySelectorAll('img, video').length > 0,
+                image_alts: Array.from(cardRoot.querySelectorAll('img')).map(img => img.alt).filter(a => a && !a.includes('大頭貼'))
             };
         }
         """,
@@ -581,7 +475,7 @@ if __name__ == "__main__":
     print("🚀 啟動 Threads 爬蟲程式...")
     asyncio.run(
         login_and_scrape_auto(
-            max_posts=30,
+            max_posts=10000,
             storage_state_path=storage_state_path,
         )
     )
