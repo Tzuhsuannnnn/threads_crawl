@@ -15,8 +15,8 @@ def filter_alts(alts):
     return [alt for alt in alts if not any(k in alt for k in exclude_keywords)]
 
 def main():
-    input_file = 'bigcity_hsinchu_replies.json'
-    output_file = 'bigcity_hsinchu_replies.csv'
+    input_file = 'dominospizza_tw_replies2.json'
+    output_file = 'dominospizza_tw_replies2.csv'
 
     # 1. 讀取原始資料
     try:

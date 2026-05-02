@@ -1,5 +1,6 @@
 import asyncio
 import json
+import random
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -68,8 +69,11 @@ async def detect_login_gate(page):
     return False
 
 
-async def scroll_feed_and_wait(page, wait_ms=6000):  # 由 4500 增加到 6000 毫秒（6 秒）
+async def scroll_feed_and_wait(page, wait_ms=None):
     """Scroll the most likely feed container and wait for potential lazy-loaded content."""
+
+    if wait_ms is None:
+        wait_ms = random.randint(7000, 15000)
     before_count = await page.locator("time").count()
 
     scroll_info = await page.evaluate(
@@ -321,161 +325,126 @@ async def collect_visible_posts(page, username, replies_data, seen_post_urls, ma
     return batch_added, posts_count >= max_posts
 
 
-async def run_auto_scrape_on_page(
-    page,
-    username,
-    max_posts=50,
-    max_scroll_rounds=None,
-    no_growth_limit=12,
-    no_growth_recovery_limit=3,
-):
-    replies_data = []
-    seen_post_urls = set()
-    stop_reason = "unknown"
-
-    try:
-        await page.wait_for_selector("time", timeout=15000)
-    except Exception as e:
-        print(f"⚠️ 頁面載入失敗：{e}")
-
-    time_count_initial = await page.locator("time").count()
-    print(f"✓ 找到 {time_count_initial} 個回覆")
-
-    no_growth_rounds = 0
-    scroll_round = 0
-    no_growth_recoveries = 0
-
-    while True:
-        if max_scroll_rounds is not None and scroll_round >= max_scroll_rounds:
-            stop_reason = "max_scroll_rounds"
-            break
-
-        scroll_round += 1
-        batch_added, reached_max_posts = await collect_visible_posts(
-            page, username, replies_data, seen_post_urls, max_posts
-        )
-
-        if reached_max_posts:
-            stop_reason = "max_posts"
-            break
-
-        if batch_added == 0:
-            no_growth_rounds += 1
-            print(f"  [輪次 {scroll_round}] 沒有新貼文 (連續 {no_growth_rounds} 輪)")
-        else:
-            no_growth_rounds = 0
-            print(f"  [輪次 {scroll_round}] 新增 {batch_added} 則，共 {len(replies_data)} 則")
-
-        if batch_added == 0 and await detect_login_gate(page):
-            stop_reason = "login_gate"
-            print("\n⚠️ 偵測到登入牆！")
-            break
-
-        if no_growth_rounds >= no_growth_limit:
-            can_try_recovery = (
-                max_posts is not None
-                and len(replies_data) < max_posts
-                and no_growth_recoveries < no_growth_recovery_limit
-            )
-
-            if can_try_recovery:
-                no_growth_recoveries += 1
-                no_growth_rounds = 0
-                print(
-                    f"  [復原 {no_growth_recoveries}/{no_growth_recovery_limit}] 無增長，重新載入頁面後續抓..."
-                )
-                await page.reload(wait_until="domcontentloaded")
-                try:
-                    await page.wait_for_selector("time", timeout=15000)
-                except Exception:
-                    pass
-                await page.wait_for_timeout(1200)
+async def run_auto_scrape(page, username, target_new_posts, seen_urls):
+    new_replies = [] # 建立一個乾淨的 list，只用來裝「這次新抓到的」
+    no_growth = 0
+    
+    while len(new_replies) < target_new_posts:
+        time_elements = await page.locator("time").element_handles()
+        initial_count = len(new_replies)
+        
+        if time_elements:
+            last_el = time_elements[-1]
+            last_record = await extract_post_card(last_el, username)
+            
+            if last_record and last_record.get("post_url") in seen_urls:
+                print(f"⏩ 快速推進中... 目前已路過至 {last_record['timestamp']['display']}")
+                await page.evaluate("window.scrollBy(0, 8000)") 
+                await asyncio.sleep(2) 
                 continue
 
-            stop_reason = "no_growth"
-            print("  已達到無增長限制，停止爬取")
-            break
+        for el in time_elements:
+            try:
+                record = await extract_post_card(el, username)
+                if not record or not record.get("post_url") or record["post_url"] in seen_urls:
+                    continue
+                
+                for m in record["metrics"].values(): 
+                    m["value"] = parse_count(m["raw"])
+                
+                # 加入記憶庫 (防止這輪重複抓)
+                seen_urls.add(record["post_url"])
+                # 只把新的資料存進 new_replies
+                new_replies.append(record)
+                
+                total_seen = len(seen_urls) # 加上舊資料的總數
+                print(f"✓ [本次新抓:{len(new_replies)} | 歷史總和:{total_seen}] {record['timestamp']['display']} | {record['author']['username']}")
+                
+                if len(new_replies) >= target_new_posts: break
+            except: continue
 
-        scroll_result = await scroll_feed_and_wait(page)
-        before_count = scroll_result["before_count"]
-        after_count = scroll_result["after_count"]
-        info = scroll_result["scroll_info"]
-        print(
-            f"  [輪次 {scroll_round}] 滾動目標={info.get('target')} | time: {before_count} -> {after_count}"
-        )
-
-    return replies_data, stop_reason
+        if len(new_replies) == initial_count:
+            no_growth += 1
+            if no_growth > 10: 
+                print("⚠️ 偵測到加載停滯，可能觸發限流，存檔中...")
+                break
+        else:
+            no_growth = 0
+            await scroll_feed_and_wait(page)
+            
+    return new_replies
 
 
 async def login_and_scrape_auto(
-    max_posts=50,
+    target_new_posts=2560, # 假設你這次想「再」抓 2000 則
     storage_state_path="threads_storage_state.json",
 ):
-    """Open browser, wait for user to log in and navigate, then auto-scrape."""
     async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=False,
-            args=["--disable-blink-features=AutomationControlled"],
-        )
-        context = await browser.new_context(user_agent=build_user_agent())
+        browser = await p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
+        context_args = {"user_agent": build_user_agent()}
+        if Path(storage_state_path).exists():
+            context_args["storage_state"] = storage_state_path
+            
+        context = await browser.new_context(**context_args)
         await context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         page = await context.new_page()
 
         await page.goto("https://www.threads.net/")
 
-        print("\n[登入後自動爬取模式]")
-        print("1) 請在瀏覽器手動登入")
-        print("2) 登入完成後，手動將網址導航到該品牌的 replies 頁面 (例如: https://www.threads.net/@shopee_tw/replies)")
-        print("3) 當你確認已在目標的 replies 頁面後，回終端按 Enter")
-        await asyncio.to_thread(input, "按 Enter 開始自動爬取... ")
+        print("\n[安全分檔：中斷續傳模式已啟動]")
+        print(f"🎯 本次目標：只抓取【全新】的 {target_new_posts} 則貼文")
+        await asyncio.to_thread(input, "當你確認已在目標 replies 頁面後，按 Enter 開始自動抓取... ")
 
-        # 從當前網址解析出 username
         current_url = page.url
-        print(f"\n目前網址: {current_url}")
+        username = re.search(r"/@([^/]+)/replies", current_url).group(1) if re.search(r"/@([^/]+)/replies", current_url) else "default_user"
         
-        username_match = re.search(r"/@([^/]+)/replies", current_url)
-        if not username_match:
-            print("⚠️ 警告：當前網址不是標準的 replies 頁面，系統將嘗試使用 default_user 儲存，或可能無法順利擷取。")
-            username = "default_user"
+        # ==========================================
+        # 核心修改：將「歷史檔案」與「新存檔案」分開
+        # ==========================================
+        history_file = Path(f"{username}_replies1.json") # 你已經備份好的 7000 則
+        output_file = Path(f"{username}_replies2.json")  # 這次新抓完要存的地方
+        
+        seen_urls = set()
+
+        # 1. 讀取歷史檔案 (唯讀模式，絕對安全)
+        if history_file.exists():
+            with open(history_file, "r", encoding="utf-8") as f:
+                old_data = json.load(f)
+                seen_urls = {p["post_url"] for p in old_data.get("posts", []) if p.get("post_url")}
+            print(f"✅ 成功載入防護罩：已記憶 {len(seen_urls)} 則歷史貼文，將自動跳過它們！")
         else:
-            username = username_match.group(1)
-            print(f"✓ 偵測到目標帳號: {username}")
+            print("🆕 找不到 _replies1.json，將從頭開始抓取。")
 
-        await context.storage_state(path=storage_state_path)
-        print(f"✓ 已更新並儲存登入狀態：{storage_state_path}\n")
+        # 2. 執行抓取 (回傳的 updated_data 只會包含新的資料)
+        new_data = await run_auto_scrape(page, username, target_new_posts, seen_urls)
 
-        replies_data, stop_reason = await run_auto_scrape_on_page(
-            page,
-            username,
-            max_posts=max_posts,
-            no_growth_limit=12,
-            no_growth_recovery_limit=3,
-        )
-
+        # 3. 儲存新檔案 (存進 replies2.json)
         output = {
             "username": username,
             "source_url": current_url,
             "scraped_at": datetime.now(timezone.utc).isoformat(),
-            "max_posts": max_posts,
-            "stop_reason": stop_reason,
-            "posts": replies_data,
+            "new_posts_count": len(new_data),
+            "posts": new_data, # 這裡面只有新的貼文！
         }
 
-        with open(f"{username}_replies.json", "w", encoding="utf-8") as f:
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
 
-        print(f"\n🎉 爬取完成，共存取 {len(replies_data)} 則貼文至 {username}_replies.json。")
+        print(f"\n🎉 爬取完成！已將 {len(new_data)} 則【全新貼文】安全存入 {output_file}。")
+        await context.storage_state(path=storage_state_path)
         await context.close()
         await browser.close()
 
-# 執行
 if __name__ == "__main__":
     storage_state_path = "threads_storage_state.json"
     
-    print("🚀 啟動 Threads 爬蟲程式...")
+    print("🚀 啟動 Threads 安全分檔爬蟲...")
     asyncio.run(
         login_and_scrape_auto(
-            max_posts=10000,
+            # 注意：這裡是設定「本次要新增多少則」
+            # 如果你想要總數達到 9000，且已有 7000，這裡就設 2000
+            # 如果你要額外再抓 9000 則，這裡就設 9000
+            target_new_posts=2560, 
             storage_state_path=storage_state_path,
         )
     )
